@@ -1,0 +1,265 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  background-image: url("bg-top.svg");
+  background-repeat: no-repeat;
+  background-position: right -12.5rem top -2rem;
+  padding: 0 1.5rem;
+  background-color: #f6f6fe;
+}
+
+@media (min-width: 62em) {
+  body {
+    background-image: url("bg-top.svg"), url("bg-bottom.svg");
+    background-position: right 0rem top 0rem, left 0rem bottom -12rem;
+  }
+}
+
+body button {
+  outline: none !important;
+}
+
+header {
+  width: 16.25rem;
+  margin: auto;
+  padding-bottom: 5rem;
+}
+
+header h1 {
+  text-align: center;
+  margin-top: 4.375rem;
+  margin-bottom: 3rem;
+  color: #6d708d;
+}
+
+header .switch {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+header .switch span {
+  font-size: 1rem;
+  color: #b3b5c6;
+}
+
+header .switch button:hover {
+  opacity: 0.7;
+}
+
+header .switch button {
+  width: 3.5rem;
+  height: 2rem;
+  background-image: -webkit-gradient(
+    linear,
+    left top,
+    right top,
+    from(#a3a8f0),
+    to(#696fdd)
+  );
+  background-image: linear-gradient(to right, #a3a8f0, #696fdd);
+  border: none;
+  border-radius: 1rem;
+  position: relative;
+  cursor: pointer;
+}
+
+header .switch .switched::after {
+  -webkit-transform: translatex(-24px);
+  transform: translatex(-24px);
+}
+
+header .switch button::after {
+  content: "";
+  width: 1.5rem;
+  height: 1.5rem;
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  background-color: #f6f6fe;
+  border-radius: 50%;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  pointer-events: none;
+}
+
+main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+@media (min-width: 62em) {
+  main {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+  }
+}
+
+.white {
+  background-color: white;
+}
+
+.white p {
+  color: #6d708d;
+}
+
+.white h3 {
+  color: #6d708d;
+}
+
+.white h2 {
+  color: #494c5f;
+  font-size: 4rem;
+}
+
+.white div {
+  border-bottom: 1px solid #b3b5c6;
+}
+
+.white button:hover {
+  background: none;
+  color: #696fdd;
+  border: 1px solid #696fdd;
+}
+
+.white button {
+  color: #f6f6fe;
+  background-image: -webkit-gradient(
+    linear,
+    left top,
+    right top,
+    from(#a3a8f0),
+    to(#696fdd)
+  );
+  background-image: linear-gradient(to right, #a3a8f0, #696fdd);
+}
+
+.purple {
+  background-image: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    from(#a3a8f0),
+    to(#696fdd)
+  );
+  background-image: linear-gradient(to bottom, #a3a8f0, #696fdd);
+}
+
+@media (min-width: 62em) {
+  .purple {
+    height: 31.25rem !important;
+    padding-top: 3.45rem !important;
+  }
+}
+
+.purple h3 {
+  color: white;
+}
+
+.purple h2 {
+  color: white;
+  font-size: 4rem;
+}
+
+.purple p {
+  color: white;
+}
+
+.purple div {
+  border-bottom: 1px solid #b3b5c6;
+}
+
+.purple button:hover {
+  background: none;
+  color: #f6f6fe;
+  border: 1px solid #f6f6fe;
+}
+
+.purple button {
+  color: #696fdd;
+  background-color: white;
+}
+
+.card {
+  width: 100%;
+  max-width: 21.875rem;
+  height: 28.375rem;
+  padding: 2rem 1.8125rem;
+  border-radius: 0.5625rem;
+  -webkit-box-shadow: 0px 11px 16px -1px rgba(0, 0, 0, 0.31);
+  box-shadow: 0px 11px 16px -1px rgba(0, 0, 0, 0.31);
+  margin-bottom: 2rem;
+}
+
+.card div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.card .prices {
+  height: 9.375rem;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+}
+
+.card .features {
+  height: 3.25rem;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.card .hidde {
+  display: none;
+}
+
+.card button {
+  width: 100%;
+  height: 2.75rem;
+  font-size: 0.9375rem;
+  font-weight: 700;
+  word-spacing: 0.3rem;
+  border-radius: 0.4375rem;
+  border: none;
+  display: block;
+  cursor: pointer;
+  margin-top: 2rem;
+}
+/*# sourceMappingURL=style.css.map */
